@@ -605,33 +605,69 @@ q:after {
  *********************************************/
 
 .reveal ul.roundLeft {
-  margin-top: 30px;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.reveal ul.roundRight {
+  list-style: none;
+  text-align: right;
+}
+
+.reveal ul.roundRight li:after {
+  content: "\0020 \2022";
+}
+
+.reveal ul.roundLeft li:before {
+  content: "\2022 \0020 ";
+}
+
+.reveal ul.roundRight>li:first-child {
+  -webkit-transform-origin: 92% 70%;
+  -moz-transform-origin: 92% 70%;
+  -ms-transform-origin: 92% 70%;
+  -o-transform-origin: 92% 70%;
+  transform-origin: 92% 70%;
+}
+
+.reveal ul.roundRight>li:last-child {
+  -webkit-transform-origin: 91% 36%;
+  -moz-transform-origin: 91% 36%;
+  -ms-transform-origin: 91% 36%;
+  -o-transform-origin: 91% 36%;
+  transform-origin: 91% 36%;
 }
 
 .reveal ul.roundLeft>li:first-child {
+  -webkit-transform-origin: 6% 60%;
+  -moz-transform-origin: 6% 60%;
+  -ms-transform-origin: 6% 60%;
+  -o-transform-origin: 6% 60%;
+  transform-origin: 6% 60%;
+}
+
+.reveal ul.roundLeft>li:last-child {
+  -webkit-transform-origin: 7% 52%;
+  -moz-transform-origin: 7% 52%;
+  -ms-transform-origin: 7% 52%;
+  -o-transform-origin: 7% 52%;
+  transform-origin: 7% 52%;
+} 
+
+.reveal ul.roundLeft>li:first-child, .reveal ul.roundRight>li:last-child {
   -webkit-transform: rotate(-30deg);
   -moz-transform: rotate(-30deg);
   -ms-transform: rotate(-30deg);
   -o-transform: rotate(-30deg);
   transform: rotate(-30deg);
-  -webkit-transform-origin: 0% 67%;
-  -moz-transform-origin: 0% 67%;
-  -ms-transform-origin: 0% 67%;
-  -o-transform-origin: 0% 67%;
-  transform-origin: 0% 67%;
 }
 
-.reveal ul.roundLeft>li:last-child {
+.reveal ul.roundLeft>li:last-child, .reveal ul.roundRight>li:first-child {
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
-  -webkit-transform-origin: 0% 38%;
-  -moz-transform-origin: 0% 38%;
-  -ms-transform-origin: 0% 38%;
-  -o-transform-origin: 0% 38%;
-  transform-origin: 0% 38%;
 }
 
 .reveal ul.arrowList {
@@ -643,11 +679,23 @@ q:after {
 }
 
 /*********************************************
- * UL
+ * NAV
  *********************************************/
 
 .reveal nav {
     text-align: right;
     font-size: 0.5em;
     margin: 0.3em;
+}
+
+/*********************************************
+ * HEADER
+ *********************************************/
+
+.reveal header {
+    border-bottom: thin solid gray;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
