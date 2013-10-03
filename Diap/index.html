@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Diap. it!</title>
+
+		<meta name="description" content="Apprentissage de l'utilisation de différents framework made in Hakin El Hattab">
+		<meta name="author" content="Raphaël Marques">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/diap.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!-- For adding even more things 
+		<link rel="stylesheet" href="css/diaplusplus.css">-->
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-no-slide-counter>
+					<h1>Diap.</h1>
+					<br/>
+					<h4>based on a lot of cool stuff, including the best of</h4>
+					<br/>
+					<h3><a target="_blank" href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a> / <a target="_blank" href="https://code.google.com/p/io-2012-slides/source/checkout">Google IO Slides</a> / <a target="_blank" href="https://github.com/briancavalier/slides">slides</a> / <a target="_blank" target="_blank" href="https://github.com/LeaVerou/CSSS">CSSS</a> / <a target="_blank" href="http://iprodev.com/iview/index.html">iView</a> <a href="http://projects.nickstakenburg.com/lightview" target="_blank">Lightview</a></h3>
+					<br/>
+					<small>by Raphaël MARQUES</small>
+				</section>
+
+				<section>
+					<section>
+						<h2>Toggle the slide counter</h2>
+						<p>
+							You can easily switch on and off the slide counter on the top left corner by adding <code data-highlighted>data-no-slide-counter</code> 
+							as an attribute to the section, e.g.
+						</p>
+						<pre data-caption="Toggling counter off"><code data-trim>&lt;section data-no-slide-counter&gt;</code></pre>
+					</section>
+					<section>
+						<h2>Slide counter off, what else?</h2>
+						<p>
+							The slide counter actually displayed on the top left corner, is not fixed.
+							Slide down ;)
+						</p>
+					</section>
+					<section data-counter-position="top-right">
+						<h2>See?</h2>
+						<p>
+							It can be displayed on each of the four corners:
+							<ul>
+								<li>top-left</li>
+								<li>top-right</li>
+								<li>bottom-right</li>
+								<li>bottom-left</li>
+							</ul>
+						</p>
+					</section>
+					<section data-controls-position="bottom-left" data-counter-position="bottom-right">
+						<h2>But how?</h2>
+						<p>
+							Simple!
+							<pre><code>&lt;section data-counter-position="bottom-right"&gt;</code></pre>
+						</p>
+					</section>
+					<section data-counter-position="bottom-left">
+						<h2>Magic!</h2>
+						<p>
+							The counter is intented to suit your wish.
+							<br/>
+							Play with it.
+							<br/>
+							Enjoy it ;)
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>And here come the controls.</h2>
+						<p>
+							On the <code data-highlighted>bottom-right</code>!
+						</p>
+					</section>
+					<section data-controls-position="top-right">
+						<h2>And here come the controls. (bis-cuit)</h2>
+						<p>
+							On the <code data-highlighted>top-right</code>!
+						</p>
+					</section>
+					<section data-counter-position="top-right" data-controls-position="top-left">
+						<h2>And here come the controls. (ter-mite)</h2>
+						<p>
+							On the <code data-highlighted>top-left</code>!
+						</p>
+					</section>
+					<section data-controls-position="bottom-left">
+						<h2>And here come the controls. (quater-back)</h2>
+						<p>
+							On the <code data-highlighted>bottom-left</code>!
+							<pre><code>&lt;section data-controls-position="bottom-left"&gt;</code></pre>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Spectacular image!</h2>
+						You can display an image like this:
+						<a target="_blank" href="http://www.google.com/" target="_blank">
+							<img data-no-title-caption data-no-bottom-shadow width="640" height="320" src="img/1.jpg" title="my awesome image :D">
+						</a>
+					</section>
+					<section>
+						<h2>Even more spectacular image!</h2>
+						Or you can display it like this:
+						<a target="_blank" href="http://www.google.com/" target="_blank">
+							<img width="640" height="320" src="img/1.jpg" title="my awesome image :D">
+						</a>
+					</section>
+					<section>
+						<h2>All thanks to...</h2>
+						Two data attributes:
+						<ul>
+							<li>
+								<code data-highlighted>data-no-title-caption</code>
+								<ul>
+									<li>Uses the <code data-highlighted>&lt;img&gt;</code> "title" attribute to (not) display the caption</li>
+								</ul>
+							</li>
+							<li><code data-highlighted>data-no-bottom-shadow</code></li>
+						</ul>
+						Which gives
+						<pre><code data-trim>&lt;img title="Awesome!" data-no-title-caption data-no-bottom-shadow&gt;</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<figure>
+							<h3>The Hell Of</h3>
+							<br/>
+							<h1>An extremely awesome title!</h1>
+						</figure>
+					</section>
+
+					<section>
+						<h2>An extremely awesome title</h2>
+						<p>Using simple <code data-highlighted>&lt;figure&gt;</code>:</p>
+						<pre data-caption="javascript"><code data-trim contentEditable>&lt;figure&gt;
+	&lt;h3&gt;The Hell Of&lt;/h3&gt;
+	&lt;br/&gt;
+	&lt;h1&gt;An extremely awesome title!&lt;/h1&gt;
+&lt;/figure&gt;</code></pre>
+					<br/>
+					<small><em><strong>Tip:</strong> You can edit this one. Just click on it ;)</em></small>
+					</section>
+				</section>
+
+				<section data-transition="linear" data-align="left">
+					<h2 data-align="right">What about alignment?</h2>
+					<p data-align="center">
+						You can align every tag using the <code data-highlighted>data-align="value"</code> attribute in <strong><em>every</em></strong> displayable HTML tag you want.
+					</p>
+					<br/>
+					<p>
+						Just replace <code data-highlighted>value</code> by one of these:
+						<ul>
+							<li>center</li>
+							<li>left</li>
+							<li>right</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>When highlighting becomes easier</h2>
+					<p>
+						And it works with HTML / CSS color formatting (e.g. "#something", "red", ...):
+						<ul>
+							<li><code data-highlighted="green">&lt;code data-highlighted="green"&gt;<br/>array = malloc(hyp_sz * sizeof(int***));<br/>&lt;/code&gt;</code></li>
+							<li><p data-highlighted="blue">&lt;p data-highlighted="blue"&gt;Lorem ipsum blah blah&lt;/p&gt;</p></li>
+							<li><div data-highlighted="#333333">&lt;div data-highlighted="#333333"&gt;Wassup y'all?&lt;/div&gt;</div></li>
+						</ul>
+					</p>
+					<br/>
+					<p>
+						By default, the highlighted color is <code data-highlighted>rgba(184, 20, 20, 0.8)</code>.
+					</p>
+				</section>
+
+				<section data-transition="concave">
+					<h2>Code stuffing</h2>
+					<p>What do you think of that:</p>
+					<pre data-caption="c++"><code data-trim>// Display "Hello world!" a thousand times
+for(int i(0); i &lt; 1000; ++i)
+	std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;</code></pre>
+					<pre data-no-shadow data-caption="How is it done"><code data-trim>&lt;pre data-no-shadow data-caption="your_caption"&gt;
+	&lt;code&gt;
+		your awesome code is amazed by other stuff too
+	&lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>		<p>
+						<small><em><strong>Tip:</strong> You can disable the box-shadow around the code, using 
+						<code data-highlighted>data-no-shadow</code> on the <code data-highlighted>&lt;pre&gt;</code>.</em></small>
+					</p>
+				</section>
+				<section>
+					<section>
+						<header data-align="right">Styled lists</header>
+						<br/>
+						<ul class="roundRight" style="margin-left:-7px;">
+							<li>is something</li>
+							<li><code data-highlighted>class="roundRight"</code></li>
+							<li>like that</li>
+						</ul>
+						<h2 style="position:absolute;margin-top:30px;left:440px;bottom:27px;">Cool</h2>
+						<ul class="roundLeft" style="margin-left:130px;">
+							<li>is something</li>
+							<li><code data-highlighted>class="roundLeft"</code></li>
+							<li>like that</li>
+						</ul>
+					</section>
+					<section>
+						<header data-align="left">What you can do with it</header>
+						<br/>
+						<ul class="roundRight" style="margin-left:-7px;">
+							<li><a href="http://www.twitter.com/">Twitter</a></li>
+							<li><a href="http://www.facebook.com/">Facebook</a></li>
+							<li><a href="http://www.plus.google.com/">Google+</a></li>
+						</ul>
+						<h1 style="position:absolute;margin-top:30px;left:386px;bottom:126px;">Me</h1>
+						<ul class="roundLeft" style="margin-left:130px;">
+							<li><a href="mailto:toto@toto.to">toto@toto.to</a></li>
+							<li><a href="awesome.website.com">Website</a></li>
+							<li><a href="i_have_no_clue.fr">Anything else</a></li>
+						</ul>
+						<br/>
+						<br/>
+						<br/>
+						<small>... and even more!</small>
+					</section>
+					<section>
+						<header>Turn it on and off</header>
+						<ul>
+							<li>Active online led</li>
+							<li>Inactive online led</li>
+							<li>Inactive offline led</li>
+							<li>Active offline led</li>
+						</ul>
+						<div class="green"></div>
+						<div class="green active"></div>
+						<div class="green active blink"></div>
+						<br/>
+						<div class="orange"></div>
+						<div class="orange active"></div>
+						<div class="orange active blink"></div>
+						<br/>
+						<div class="red"></div>
+						<div class="red active"></div>
+						<div class="red active blink"></div>
+					</section>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a target="_blank" href="?transition=cube#/transitions">Cube</a> -
+						<a target="_blank" href="?transition=page#/transitions">Page</a> -
+						<a target="_blank" href="?transition=concave#/transitions">Concave</a> -
+						<a target="_blank" href="?transition=zoom#/transitions">Zoom</a> -
+						<a target="_blank" href="?transition=linear#/transitions">Linear</a> -
+						<a target="_blank" href="?transition=fade#/transitions">Fade</a> -
+						<a target="_blank" href="?transition=none#/transitions">None</a> -
+						<a target="_blank" href="?#/transitions">Default</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						Reveal.js comes with a few themes built in: <br>
+						<a target="_blank" href="?#/themes">Default</a> -
+						<a target="_blank" href="?theme=sky#/themes">Sky</a> -
+						<a target="_blank" href="?theme=beige#/themes">Beige</a> -
+						<a target="_blank" href="?theme=simple#/themes">Simple</a> -
+						<a target="_blank" href="?theme=serif#/themes">Serif</a> -
+						<a target="_blank" href="?theme=night#/themes">Night</a> <br>
+						<a target="_blank" href="?theme=moon.css#/themes">Moon</a> -
+						<a target="_blank" href="?theme=simple.css#/themes">Simple</a> -
+						<a target="_blank" href="?theme=solarized.css#/themes">Solarized</a>
+					</p>
+					<p>
+						<small>
+							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a target="_blank" href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+					<!--<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>-->
+					<script>
+						document.getElementById('slideshare').attributeName = 'allowfullscreen';
+					</script>
+				</section>
+
+				<section>
+					<section>
+						<h1>Merci de votre attention</h1>
+						<p>
+							Si vous avez des questions, je suis tout ouïe.
+						</p>
+						<small>
+							<blockquote>
+									Question time!
+								<footer>— <cite>Leonardo Da Vinci</cite></footer>
+							</blockquote>
+						</small>
+					</section>
+					<section>
+						<h1>The end!</h1>
+						<p>Twas Diap. by Raphaël Marques</p>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/diap.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				rollingLinks: true,
+				previewLinks: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+			Reveal.addEventListener('ready', function(event){
+				initDiap();
+				actualizeElements(event);
+			});
+
+			Reveal.addEventListener('slidechanged', function(event){
+				actualizeElements(event);
+			});
+
+		</script>
+
+	</body>
+</html>
