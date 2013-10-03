@@ -1,13 +1,48 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);*/
 /**
  * Diap theme for reveal.js.
  *
  * Copyright (C) 2013-2014 Raphaël Marques
  */
 @font-face {
-    font-family: 'League Gothic';
-  src: url("../../lib/font/league_gothic-webfont.eot");
+  font-family: "League Gothic";
+  src: url("../../lib/font/league_gothic-webfont.eot") format("embedded-opentype");
   src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IndieFlower";
+  src: url("../../fonts/IndieFlower.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HappyMonkey";
+  src: url("../../fonts/HappyMonkey-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syncopate";
+  src: url("../../fonts/Syncopate-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Offside";
+  src: url("../../fonts/Offside-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,18 +50,8 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-/*body {
-  background: #f7f2d3;
-  background: -moz-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #f7f2d3));
-  background: -webkit-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -o-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -ms-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background-color: #f7f3de; }*/
 
 body {
-/*f7fbfc*/
     background: #add9e4;
     background: -moz-radial-gradient(center, circle cover, #ffe181 0%, #add9e4 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #ffe181), color-stop(100%, #add9e4));
@@ -604,13 +629,15 @@ q:after {
  * UL
  *********************************************/
 
-.reveal ul.roundLeft {
+.reveal ul.leds, .reveal ul.roundLeft, .reveal ul.roundRight {
   list-style: none;
+}
+
+.reveal ul.roundLeft {
   margin-top: 40px;
 }
 
 .reveal ul.roundRight {
-  list-style: none;
   text-align: right;
 }
 
@@ -674,6 +701,10 @@ q:after {
   list-style: none;
 }
 
+.reveal ul.leds>li.online:before {
+
+}
+
 .reveal ul.arrowList li:before {
   content: "\279C \0020";
 }
@@ -693,6 +724,7 @@ q:after {
  *********************************************/
 
 .reveal header {
+    font-family: "Offside", "Lato", Impact, sans-serif;
     border-bottom: thin solid gray;
     text-transform: uppercase;
     padding-bottom: 10px;
