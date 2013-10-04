@@ -76,6 +76,10 @@ body {
     text-shadow: none;
 }
 
+.reveal small {
+  line-height: 2em !important;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
@@ -281,6 +285,11 @@ q:after {
     color: #db1717;
     margin-left: -0.95em;
     font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+}
+
+.reveal blockquote>footer {
+  text-align: right;
+  font-size: .75em;
 }
 
 /*********************************************
@@ -889,7 +898,7 @@ q:after {
     }
 
     50% {
-        -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
+        -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
         background: -webkit-linear-gradient(-90deg,rgba(226,120,120,0.9),rgba(216,74,74,1) 1%,rgba(188,47,47,1) 98%,rgba(40,40,40,0.5) 100%);
     }
 
@@ -967,12 +976,15 @@ q:after {
     };
 }
 
-.green, .orange, .red {
-    margin: 57px 13px 0 13px !important;
+span.round {
+    border-radius: 10px;
+}
+
+span.green, span.orange, span.red {
+    margin:15px 15px 15px -30px !important;
     width: 12px;
     height: 12px;
     float: left;
-    border-radius: 10px;
     border-top: 1px solid #0f0f0f;
     border-right: 1px solid #0f0f0f;
     border-left: 1px solid #0f0f0f;
@@ -984,7 +996,7 @@ q:after {
     transition: 1s ease;
 }
 
-.green {
+span.green {
     background: black;
     background: -webkit-linear-gradient(-90deg,rgba(85,92,79,0.9),rgba(69,76,62,1) 1%,rgba(42,49,34,1)  97%,rgba(15,15,15,1) 100%);
     background: -moz-linear-gradient(-90deg,rgba(85,92,79,0.9),rgba(69,76,62,1) 1%,rgba(42,49,34,1)  97%,rgba(15,15,15,1) 100%);
@@ -992,14 +1004,14 @@ q:after {
     background: -o-linear-gradient(-90deg,rgba(85,92,79,0.9),rgba(69,76,62,1) 1%,rgba(42,49,34,1)  97%,rgba(15,15,15,1) 100%);
 }
 
-.orange {
+span.orange {
     background: -webkit-linear-gradient(-90deg, rgba(113,99,91,0.9) 0%,rgba(100,76,64,1) 1%,rgba(73,50,37,1) 98%,rgba(15,15,15,1) 100%);
     background: -moz-linear-gradient(-90deg,rgba(113,99,91,0.9),rgba(100,76,64,1) 1%,rgba(73,50,37,1) 98%,rgba(15,15,15,1) 100%);
     background: -ms-linear-gradient(-90deg,rgba(113,99,91,0.9),rgba(100,76,64,1) 1%,rgba(73,50,37,1) 98%,rgba(15,15,15,1) 100%);
     background: -o-linear-gradient(-90deg,rgba(113,99,91,0.9),rgba(100,76,64,1) 1%,rgba(73,50,37,1) 98%,rgba(15,15,15,1) 100%);
 }
 
-.red {
+span.red {
     background: black;
     background: -webkit-linear-gradient(-90deg,rgba(113,91,91,0.9),rgba(100,64,64,1) 1%,rgba(72,37,37,1) 98%,rgba(15,15,15,1) 100%);
     background: -moz-linear-gradient(-90deg,rgba(113,91,91,0.9),rgba(100,64,64,1) 1%,rgba(72,37,37,1) 98%,rgba(15,15,15,1) 100%);
@@ -1007,7 +1019,7 @@ q:after {
     background: -o-linear-gradient(-90deg,rgba(113,91,91,0.9),rgba(100,64,64,1) 1%,rgba(72,37,37,1) 98%,rgba(15,15,15,1) 100%);
 }
 
-.green.active {
+span.green.active {
     border-top: 1px solid rgba(44,66,20,1);
     border-right: 1px solid rgba(42,63,20,0.8);
     border-left: 1px solid rgba(42,63,20,0.8);
@@ -1024,12 +1036,12 @@ q:after {
     background: -o-linear-gradient(-90deg,rgba(156,204,105,0.9),rgba(122,186,53,1) 1%,rgba(95,159,26,1) 98%,rgba(40,40,40,0.5) 100%);
 }
 
-.orange.active {
+span.orange.active {
     border-top: 1px solid rgba(97,71,30,1);
     border-right: 1px solid rgba(83,57,27,0.8);
     border-left: 1px solid rgba(83,57,27,0.8);
     border-bottom: 1px solid rgba(125,98,69,1);
-    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
+    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
     -webkit-box-shadow: 0 -1px 10px rgba(199,140,58,0.5),0 -1px 20px rgba(199,140,58,1);
     -moz-box-shadow: 0 -1px 10px rgba(199,140,58,0.5),0 -1px 20px rgba(199,140,58,1);
     -ms-box-shadow: 0 -1px 10px rgba(199,140,58,0.5),0 -1px 20px rgba(199,140,58,1);
@@ -1041,16 +1053,16 @@ q:after {
     background: -o-linear-gradient(-90deg,rgba(226,164,120,0.9),rgba(216,133,74,1) 1%,rgba(188,106,47,1) 98%,rgba(40,40,40,0.5) 100%);
 }
 
-.red.active {
+span.red.active {
     border-top: 1px solid rgba(97,30,30,1);
     border-right: 1px solid rgba(83,27,27,0.8);
     border-left: 1px solid rgba(83,27,27,0.8);
     border-bottom: 1px solid rgba(125,69,69,1);
-    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
-    -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
-    -moz-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
-    -ms-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
-    -o-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
+    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
+    -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
+    -moz-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
+    -ms-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
+    -o-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
     background: red;
     background: -webkit-linear-gradient(-90deg,rgba(226,120,120,0.9),rgba(216,74,74,1) 1%,rgba(188,47,47,1) 98%,rgba(40,40,40,0.5) 100%);
     background: -moz-linear-gradient(-90deg,rgba(226,120,120,0.9),rgba(216,74,74,1) 1%,rgba(188,47,47,1) 98%,rgba(40,40,40,0.5) 100%);
@@ -1058,7 +1070,7 @@ q:after {
     background: -o-linear-gradient(-90deg,rgba(226,120,120,0.9),rgba(216,74,74,1) 1%,rgba(188,47,47,1) 98%,rgba(40,40,40,0.5) 100%);
 }
 
-.green.active.blink {
+span.green.active.blink {
     -webkit-animation-name: greenBlink;
     -moz-animation-name: greenBlink;
     -ms-animation-name: greenBlink;
@@ -1066,7 +1078,7 @@ q:after {
     animation-name: greenBlink;
 }
 
-.orange.active.blink {
+span.orange.active.blink {
     -webkit-animation-name: orangeBlink;
     -moz-animation-name: orangeBlink;
     -ms-animation-name: orangeBlink;
@@ -1074,7 +1086,7 @@ q:after {
     animation-name: orangeBlink;
 }
 
-.red.active.blink {
+span.red.active.blink {
     -webkit-animation-name: redBlink;
     -moz-animation-name: redBlink;
     -ms-animation-name: redBlink;
@@ -1082,7 +1094,7 @@ q:after {
     animation-name: redBlink;
 }
 
-.green.active.blink, .orange.active.blink, .red.active.blink {
+span.green.active.blink, span.orange.active.blink, span.red.active.blink {
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: normal;
