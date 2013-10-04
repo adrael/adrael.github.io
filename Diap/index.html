@@ -230,6 +230,8 @@ for(int i(0); i &lt; 1000; ++i)
 					<section>
 						<header data-align="right">Styled lists</header>
 						<br/>
+						<small><em><strong>Tip:</strong> Use them on the <code data-highlighted>&lt;ul&gt;</code> elements</em></small>
+						<br/>
 						<ul class="roundRight" style="margin-left:-7px;">
 							<li>is something</li>
 							<li><code data-highlighted>class="roundRight"</code></li>
@@ -261,25 +263,61 @@ for(int i(0); i &lt; 1000; ++i)
 						<br/>
 						<small>... and even more!</small>
 					</section>
-					<section>
+					<section id="lights">
 						<header>Turn it on and off</header>
-						<ul>
-							<li>Active online led</li>
-							<li>Inactive online led</li>
-							<li>Inactive offline led</li>
-							<li>Active offline led</li>
+						<ul class="leds">
+							<li><span class="green"></span>Square Green Inactive Led</li>
+							<li><span class="green active blink"></span>Square Green Flashing Led</li>
+							<li><span class="green active"></span>Square Green Active Led</li>
+							<li><span class="orange"></span>Square Orange Inactive Led</li>
+							<li><span class="orange active blink"></span>Square Orange Flashing Led</li>
+							<li><span class="orange active"></span>Square Orange Active Led</li>
+							<li><span class="red"></span>Square Red Inactive Led</li>
+							<li><span class="red active blink"></span>Square Red Flashing Led</li>
+							<li><span class="red active"></span>Square Red Active Led</li>
 						</ul>
-						<div class="green"></div>
-						<div class="green active"></div>
-						<div class="green active blink"></div>
+						<ul class="leds">
+							<li><span class="round green"></span>Round Green Inactive Led</li>
+							<li><span class="round green active blink"></span>Round Green Flashing Led</li>
+							<li><span class="round green active"></span>Round Green Active Led</li>
+							<li><span class="round orange"></span>Round Orange Inactive Led</li>
+							<li><span class="round orange active blink"></span>Round Orange Flashing Led</li>
+							<li><span class="round orange active"></span>Round Orange Active Led</li>
+							<li><span class="round red"></span>Round Red Inactive Led</li>
+							<li><span class="round red active blink"></span>Round Red Flashing Led</li>
+							<li><span class="round red active"></span>Round Red Active Led</li>
+						</ul>
+					</section>
+					<section>
+						<header>The way it is done</header>
+						<pre style="width:100%;padding-bottom:0;"><code>&lt;ul class="leds"&gt;
+	&lt;li&gt;&lt;span class="round green"&gt;&lt;/span&gt;Round Green Inactive Led&lt;/li&gt;
+	&lt;li&gt;&lt;span class="orange active blink"&gt;&lt;/span&gt;Square Orange Flashing Led&lt;/li&gt;
+	&lt;li&gt;&lt;span class="round red active"&gt;&lt;/span&gt;Round Red Active Led&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+						<ul class="leds">
+							<li><span class="round green"></span>Round Green Inactive Led</li>
+							<li><span class="orange active blink"></span>Square Orange Flashing Led</li>
+							<li><span class="round red active"></span>Round Red Active Led</li>
+						</ul>
+					</section>
+					<section>
+						<header>Playing with it</header>
+						<p data-align="left">Charges:</p>
+						<ul class="leds">
+							<li class="fragment"><span class="green active blink"></span>Very Low</li>
+							<li class="fragment"><span class="green active"></span>Low</li>
+							<li class="fragment"><span class="orange active"></span>Medium</li>
+							<li class="fragment"><span class="red active"></span>High</li>
+							<li class="fragment"><span class="red active blink"></span>Critical</li>
+						</ul>
 						<br/>
-						<div class="orange"></div>
-						<div class="orange active"></div>
-						<div class="orange active blink"></div>
 						<br/>
-						<div class="red"></div>
-						<div class="red active"></div>
-						<div class="red active blink"></div>
+						<small class="fragment"><em><strong>Tip:</strong> You can use the leds anywhere, they aren't fixed on the lists! :D</em></small>
+					</section>
+					<section>
+						<header>About the awesome titles</header>
+						<pre><code>&lt;header&gt;About the awesome titles&lt;/header&gt;</code></pre>
 					</section>
 				</section>
 
