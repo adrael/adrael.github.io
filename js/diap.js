@@ -323,3 +323,20 @@ function actualizeElements(event) {
     displaySlideNumber(event);
     displayControls();
 }
+
+/*********************************************
+ * LIGHT
+ *********************************************/
+
+function lightOnOff() {
+    var x = document.querySelector(".light");
+    if(x.innerText === "Turn the light off") {
+        x.innerText = "Turn the light on";
+        document.querySelector(".reveal").classList.remove("fadeBackgroundOff");
+        document.querySelector(".reveal").classList.add("fadeBackgroundOn");
+    } else {
+        x.innerText = "Turn the light off";
+        document.querySelector(".reveal").classList.remove("fadeBackgroundOn");
+        document.querySelector(".reveal").classList.add("fadeBackgroundOff");
+    }
+}

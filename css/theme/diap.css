@@ -70,14 +70,14 @@ body {
     color: #333333;
 }
 
+.reveal small {
+    line-height: 2em;
+}
+
 ::selection {
     color: white;
     background: rgba(184, 20, 20, 0.8);
     text-shadow: none;
-}
-
-.reveal small {
-  line-height: 2em !important;
 }
 
 /*********************************************
@@ -288,8 +288,8 @@ q:after {
 }
 
 .reveal blockquote>footer {
-  text-align: right;
-  font-size: .75em;
+    text-align: right;
+    font-size: 0.75em;
 }
 
 /*********************************************
@@ -852,7 +852,7 @@ q:after {
     }
 
     100% {
-        ms-box-shadow: none;
+        -ms-box-shadow: none;
         background: -ms-linear-gradient(-90deg, rgba(113,99,91,0.9) 0%,rgba(100,76,64,1) 1%,rgba(73,50,37,1) 98%,rgba(15,15,15,1) 100%);
     };
 }
@@ -898,7 +898,7 @@ q:after {
     }
 
     50% {
-        -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
+        -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
         background: -webkit-linear-gradient(-90deg,rgba(226,120,120,0.9),rgba(216,74,74,1) 1%,rgba(188,47,47,1) 98%,rgba(40,40,40,0.5) 100%);
     }
 
@@ -1041,7 +1041,7 @@ span.orange.active {
     border-right: 1px solid rgba(83,57,27,0.8);
     border-left: 1px solid rgba(83,57,27,0.8);
     border-bottom: 1px solid rgba(125,98,69,1);
-    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
+    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
     -webkit-box-shadow: 0 -1px 10px rgba(199,140,58,0.5),0 -1px 20px rgba(199,140,58,1);
     -moz-box-shadow: 0 -1px 10px rgba(199,140,58,0.5),0 -1px 20px rgba(199,140,58,1);
     -ms-box-shadow: 0 -1px 10px rgba(199,140,58,0.5),0 -1px 20px rgba(199,140,58,1);
@@ -1058,11 +1058,11 @@ span.red.active {
     border-right: 1px solid rgba(83,27,27,0.8);
     border-left: 1px solid rgba(83,27,27,0.8);
     border-bottom: 1px solid rgba(125,69,69,1);
-    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
-    -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
-    -moz-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
-    -ms-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
-    -o-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,0.3);
+    box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
+    -webkit-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
+    -moz-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
+    -ms-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
+    -o-box-shadow: 0 -1px 10px rgba(199,58,58,0.5),0 -1px 20px rgba(199,58,58,1);
     background: red;
     background: -webkit-linear-gradient(-90deg,rgba(226,120,120,0.9),rgba(216,74,74,1) 1%,rgba(188,47,47,1) 98%,rgba(40,40,40,0.5) 100%);
     background: -moz-linear-gradient(-90deg,rgba(226,120,120,0.9),rgba(216,74,74,1) 1%,rgba(188,47,47,1) 98%,rgba(40,40,40,0.5) 100%);
@@ -1137,4 +1137,290 @@ span.green.active.blink, span.orange.active.blink, span.red.active.blink {
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-weight: bold;
+}
+
+/*********************************************
+ * PDF
+ *********************************************/
+
+.reveal iframe.pdf {
+    border: 1px solid gray;
+    width: 100%;
+    height: 1100px;
+    box-shadow: 0px 0px 50px 0px black;
+}
+
+/*********************************************
+ * BUTTONS
+ *********************************************/
+
+.reveal .button {
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.reveal .button:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    -ms-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    -o-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.reveal .button:hover,
+.reveal .button:focus,
+.reveal .button:active {
+  color: #333333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+.reveal .button.blue,
+.reveal .button.orange,
+.reveal .button.red,
+.reveal .button.green,
+.reveal .button.lightblue,
+.reveal .button.violet {
+    color: #ffffff;
+}
+
+.reveal .button.blue {
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.reveal .button.blue:hover,
+.reveal .button.blue:focus,
+.reveal .button.blue:active {
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+.reveal .button.orange {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+.reveal .button.orange:hover,
+.reveal .button.orange:focus,
+.reveal .button.orange:active {
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+
+.reveal .button.red {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.reveal .button.red:hover,
+.reveal .button.red:focus,
+.reveal .button.red:active {
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+
+.reveal .button.green {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.reveal .button.green:hover,
+.reveal .button.green:focus,
+.reveal .button.green:active {
+  background-color: #47a447;
+  border-color: #398439;
+}
+
+.reveal .button.lightblue {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+.reveal .button.lightblue:hover,
+.reveal .button.lightblue:focus,
+.reveal .button.lightblue:active {
+  background-color: #39b3d7;
+  border-color: #269abc;
+}
+
+.reveal .button.violet {
+  background-color: #d000ba;
+  border-color: #8c007d;
+}
+
+.reveal .button.violet:hover,
+.reveal .button.violet:focus,
+.reveal .button.violet:active {
+  background-color: #ff00e4;
+  border-color: #cb00b6;
+}
+
+.reveal .button.yellow {
+  background-color: #ffea00;
+  border-color: #bfaf00;
+}
+
+.reveal .button.yellow:hover,
+.reveal .button.yellow:focus,
+.reveal .button.yellow:active {
+  background-color: #fff474;
+  border-color: #ffea00;
+}
+
+.reveal .button.light {
+    margin-bottom: 30px;
+}
+
+/*********************************************
+ * LIGHT
+ *********************************************/
+
+@-webkit-keyframes fadeOn {
+    0% {
+        background: rgba(0,0,0,0);
+    }
+
+    100% {
+        background: rgba(0,0,0,0.65);
+    };
+}
+
+@-moz-keyframes fadeOn {
+    0% {
+        background: rgba(0,0,0,0);
+    }
+
+    100% {
+        background: rgba(0,0,0,0.65);
+    };
+}
+
+@-ms-keyframes fadeOn {
+    0% {
+        background: rgba(0,0,0,0);
+    }
+
+    100% {
+        background: rgba(0,0,0,0.65);
+    };
+}
+
+@-o-keyframes fadeOn {
+    0% {
+        background: rgba(0,0,0,0);
+    }
+
+    100% {
+        background: rgba(0,0,0,0.65);
+    };
+}
+
+@keyframes fadeOn {
+    0% {
+        background: rgba(0,0,0,0);
+    }
+
+    100% {
+        background: rgba(0,0,0,0.65);
+    };
+}
+
+@-webkit-keyframes fadeOff {
+    0% {
+        background: rgba(0,0,0,0.65);
+    }
+
+    100% {
+        background: rgba(0,0,0,0);
+    };
+}
+
+@-moz-keyframes fadeOff {
+    0% {
+        background: rgba(0,0,0,0.65);
+    }
+
+    100% {
+        background: rgba(0,0,0,0);
+    };
+}
+
+@-ms-keyframes fadeOff {
+    0% {
+        background: rgba(0,0,0,0.65);
+    }
+
+    100% {
+        background: rgba(0,0,0,0);
+    };
+}
+
+@-o-keyframes fadeOff {
+    0% {
+        background: rgba(0,0,0,0.65);
+    }
+
+    100% {
+        background: rgba(0,0,0,0);
+    };
+}
+
+@keyframes fadeOff {
+    0% {
+        background: rgba(0,0,0,0.65);
+    }
+
+    100% {
+        background: rgba(0,0,0,0);
+    };
+}
+
+.reveal.fadeBackgroundOn {
+    background: rgba(0,0,0,0.65);
+    
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+
+    -webkit-animation: fadeOn 1s ease;
+    -moz-animation: fadeOn 1s ease;
+    -ms-animation: fadeOn 1s ease;
+    -o-animation: fadeOn 1s ease;
+    animation: fadeOn 1s ease;
+}
+
+.reveal.fadeBackgroundOff {
+    background: rgba(0,0,0,0);
+    
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+
+    -webkit-animation: fadeOff 1s ease;
+    -moz-animation: fadeOff 1s ease;
+    -ms-animation: fadeOff 1s ease;
+    -o-animation: fadeOff 1s ease;
+    animation: fadeOff 1s ease;
 }
