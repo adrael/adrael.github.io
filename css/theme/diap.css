@@ -121,8 +121,15 @@ body {
 }
 
 .reveal .roll span:after {
-    color: #fff;
-    background: rgba(184, 20, 20, 1);
+    color: #0066FF;
+}
+
+.reveal .roll:hover span {
+    background: none;
+    -webkit-transform: translate3d( 0px, 0px, -45px ) rotateX( 92deg );
+    -moz-transform: translate3d( 0px, 0px, -45px ) rotateX( 92deg );
+    -ms-transform: translate3d( 0px, 0px, -45px ) rotateX( 92deg );
+    transform: translate3d( 0px, 0px, -45px ) rotateX( 92deg );
 }
 
 /*********************************************
@@ -316,6 +323,7 @@ q:after {
     height: 33px;
     color: #FFFFFF;
     font-size: .7em;
+    padding-bottom: 5px;
     position: absolute;
     text-transform: uppercase;
     border-left: 2px solid #333333;
@@ -332,6 +340,7 @@ q:after {
 }
 
 .reveal .code_caption {
+    margin-top: 16px;
     padding-left: 8px;
     padding-right: 10px;
     padding-bottom: 5px;
@@ -577,10 +586,6 @@ q:after {
     animation: displaySlideNumberTL .5s;
 }
 
-.reveal .slide_number_tl {
-    margin-top: 25px;
-}
-
 .reveal .slide_number_tr {
     margin-top: -62px;
 }
@@ -621,8 +626,8 @@ q:after {
 }
 
 .reveal pre code {
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
 }
 
 /*********************************************
@@ -1124,7 +1129,7 @@ span.green.active.blink, span.orange.active.blink, span.red.active.blink {
 .reveal nav {
     text-align: right;
     font-size: 0.5em;
-    margin: 0.3em;
+    margin: 0 0.3em;
 }
 
 /*********************************************
@@ -1143,10 +1148,15 @@ span.green.active.blink, span.orange.active.blink, span.red.active.blink {
  * PDF
  *********************************************/
 
+.reveal div.pdf {
+    height: 85%;
+    margin-top: -50px;
+}
+
 .reveal iframe.pdf {
     border: 1px solid gray;
     width: 100%;
-    height: 1100px;
+    height: 100%;
     box-shadow: 0px 0px 50px 0px black;
 }
 
@@ -1155,6 +1165,7 @@ span.green.active.blink, span.orange.active.blink, span.red.active.blink {
  *********************************************/
 
 .reveal .button {
+    margin: 20px;
     color: black;
     display: inline-block;
     padding: 6px 12px;
@@ -1172,6 +1183,7 @@ span.green.active.blink, span.orange.active.blink, span.red.active.blink {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    font-weight: bold;
 }
 
 .reveal .button:active {
@@ -1283,10 +1295,6 @@ span.green.active.blink, span.orange.active.blink, span.red.active.blink {
 .reveal .button.yellow:active {
   background-color: #fff474;
   border-color: #ffea00;
-}
-
-.reveal .button.light {
-    margin-bottom: 30px;
 }
 
 /*********************************************
