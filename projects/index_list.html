@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+	    <title>Projects - adrael.github.io</title>
+
+	    <!-- Bootstrap core CSS -->
+	    <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
+
+	    <!-- Custom styles for this template -->
+	    <link href="http://getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
+
+	    <!-- adrael.github.io styles -->
+	    <link href="../css/styles.css" rel="stylesheet">
+
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	    <![endif]-->
+
+  	</head>
+
+	<body>
+
+		<div class="container">
+
+		  <div class="masthead">
+		    <h3 class="text-muted">Projects &mdash; adrael.github.io</h3>
+		    <ul class="nav nav-justified">
+		      <li><a href="../index.html">Home</a></li>
+		      <li class="active"><a href="#">Projects</a></li>
+		      <li><a href="../about/index.html">About</a></li>
+		      <li><a href="../contact/index.html">Contact</a></li>
+		    </ul>
+		  </div>
+
+			<div class="btn-group displayProjects" data-toggle="buttons">
+				<label class="btn btn-default btn-sm">
+					<input type="radio" onchange="agi.switch('grid')"><span class="glyphicon glyphicon-th"></span> Grid
+				</label>
+				<label class="btn btn-default btn-sm active">
+					<input type="radio" onchange="agi.switch('list')" checked=""><span class="glyphicon glyphicon-th-list"></span> List
+				</label>
+			</div>
+
+		  <div class="jumbotron projects-header">
+		    <h1>Projects. Projects everywhere.</h1>
+		    <p class="lead">
+		    	Be my guest. Projects are frequently updated, don't be afraid to come back often ;)
+		    </p>
+		  </div>
+
+		  <div id="projectsContainer"></div>
+
+			<!--<hr class="featurette-divider">
+		  	<div class="row featurette">
+		        <div class="col-md-7">
+		          <h2 class="featurette-heading"><span class="text-muted">Protect It!</span> It'll blow your mind.</h2>
+		          <p class="lead">
+		          	"Protect It!" is a web-based solution created for a Developpez.com project. The goal of this application is to help create safe and secure passwords, while remembering them without having to write them down somewhere.
+		          </p>
+			    <p class="text-center">
+			    	<a class="btn btn-lg btn-warning" target="_blank" href="http://adrael.github.io" role="button">Launch »</a>
+			    	<a class="btn btn-lg btn-info" target="_blank" href="https://github.com/adrael/adrael.github.io" role="button">View on Github »</a>
+			    </p>
+		        </div>
+		        <div class="col-md-5">
+		          <img class="featurette-image img-responsive img-thumbnail img-deep" alt="500x500" src="../img/protectit_big.png">
+		        </div>
+	  		</div>
+
+			<hr class="featurette-divider">
+			<div class="row featurette">
+				<div class="col-md-5">
+					<img class="featurette-image img-responsive img-thumbnail img-deep" alt="500x500" src="../img/diap_big.png">
+				</div>
+				<div class="col-md-7">
+					<h2 class="featurette-heading"><span class="text-muted">Diap.</span> What's up?</h2>
+					<p class="lead">
+		          	If you ever heard of <a href="https://github.com/hakimel/reveal.js" class="clearLink">Reveal.js</a>, then you'll be glad to use "Diap". It's Reveal.js with a lot of improvements. Now you can do whatever you always wanted to do, easily. Take a look, and don't hesistate to give me your feedback!
+		          </p>
+			    <p class="text-center">
+			    	<a class="btn btn-lg btn-warning" target="_blank" href="http://adrael.github.io/old/Diap" role="button">Launch »</a>
+			    	<a class="btn btn-lg btn-info" target="_blank" href="https://github.com/Adrael/adrael.github.io/tree/master/old/Diap" role="button">View on Github »</a>
+			    </p>
+				</div>
+			</div>
+
+			<hr class="featurette-divider">
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading"><span class="text-muted">EPSI Courses</span>. Exactly.</h2>
+					<p class="lead">
+		          	Made with Diap. "EPSI Courses" intend to give access to all of the fourth year students of the EPSI Engineering School to the courses materials. Made by a student for the students.
+		          </p>
+			    <p class="text-center">
+			    	<a class="btn btn-lg btn-warning" target="_blank" href="http://adrael.github.io/old" role="button">Launch »</a>
+			    	<a class="btn btn-lg btn-info" target="_blank" href="https://github.com/Adrael/adrael.github.io/tree/master/old/" role="button">View on Github »</a>
+			    </p>
+				</div>
+				<div class="col-md-5">
+					<img class="featurette-image img-responsive img-thumbnail img-deep" alt="500x500" src="../img/epsicourses_big.png">
+				</div>
+			</div>
+			-->
+
+		  <div class="footer">
+				<p class="pull-right">
+					<a href="#">Back to top</a>
+				</p>
+				<p>© Rapha&euml;l MARQUES 2014</p>
+		  </div>
+
+		</div>
+
+		<script type="text/javascript" src="../js/agi.js"></script>
+		<script type="text/javascript">
+			agi.makeBigProjects();
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,93 @@
+body {
+	background:url(../img/background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div.masthead>ul.nav>li>a:hover {
+	color: black;
+}
+
+h3.text-muted {
+	color: rgba(238, 238, 238, .5);
+}
+
+span.text-muted {
+	color: orange;
+}
+
+div.jumbotron.light {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+div.jumbotron.project-header {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+hr.featurette-divider {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+h2.featurette-heading {
+	margin-top: 120px;
+}
+
+div.displayProjects {
+	float: right;
+	margin-top: 20px;
+}
+
+a.clearLink {
+	color: orange;
+}
+
+div.col-lg-4 {
+	margin-bottom: 30px;
+}
+
+div.col-lg-4>h2 {
+	text-align: center;
+}
+
+.justify {
+	text-align: justify;
+}
+
+img.img-deep {
+	border: 1px solid black;
+	-webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 0 30px 1px rgba(0, 0, 0, .5);
+	-ms-box-shadow: 0 0 30px 1px rgba(0, 0, 0, .5);
+	-o-box-shadow: 0 0 30px 1px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, .5);
+}
+
+div.footer {
+	border-top: 1px solid rgba(238, 238, 238, .5);
+	color: rgba(238, 238, 238, .5);
+}
+
+div.footer a {
+	color: rgba(238, 238, 238, .5);
+}
+
+form>div.col-lg-6>button.btn.right {
+	float: right;
+	margin-left: 10px;
+}
+
+span.redStar {
+	color: red;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+p.lead>small {
+	font-size: .7em;
+}
