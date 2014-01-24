@@ -16,7 +16,7 @@ function AGI() {
 							titleLeft: " It'll blow your mind.",
 							img: "protectit.png",
 							imgBig: "protectit_big.png",
-							urlAccess: "http://adrael.github.io/protectit/index.html",
+							urlAccess: "http://adrael.github.io/projects/protectit/index.html",
 							urlGit: "https://github.com/Adrael/ProtectIt",
 							text: "\"Protect It!\" is a web-based solution created for a Developpez.com project. The goal of this application is to help create safe and secure passwords, while remembering them without having to write them down somewhere."
 						},
@@ -27,7 +27,7 @@ function AGI() {
 							titleLeft: " What's up?",
 							img: "diap.png",
 							imgBig: "diap_big.png",
-							urlAccess: "http://adrael.github.io/diap/index.html",
+							urlAccess: "http://adrael.github.io/projects/diap/index.html",
 							urlGit: "https://github.com/Adrael/Diap",
 							text: "If you ever heard of <a href=\"https://github.com/hakimel/reveal.js\" class=\"clearLink\">Reveal.js</a>, then you'll be glad to use \"Diap\". It's Reveal.js with a lot of improvements. Now you can do whatever you always wanted to do, easily. Take a look, and don't hesistate to give me your feedback!<br><br>"
 						},
@@ -38,7 +38,7 @@ function AGI() {
 							titleLeft: ". Exactly.",
 							img: "epsicourses.png",
 							imgBig: "epsicourses_big.png", 
-							urlAccess: "http://adrael.github.io/epsicourses/index.html", 
+							urlAccess: "http://adrael.github.io/projects/epsicourses/index.html", 
 							urlGit: "https://github.com/Adrael/EPSICourses",
 							text: "Made with Diap. \"EPSI Courses\" intend to give access to all of the fourth year students of the EPSI Engineering School to the courses materials. Made by a student for the students.<br><br>"
 						}

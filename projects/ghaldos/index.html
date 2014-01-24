@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>GHaLDoS - Perceptron 2.0</title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="perceptron.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>
+                	<small class="subtitle">AI Project</small>
+                	<br/>
+                	GHaLDoS &mdash; Perceptron 2.0
+                	<small class="author">
+                		Damien GABRIELLE
+                		<br/>
+                		Rapha&euml;l MARQUES
+                	</small>
+                </h1>
+            </div>
+            <div class="row" role="main">
+                <form role="form">
+                    <div class="col-md-4">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Perceptron</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <canvas id="canvas" width="300" height="353">alternate content</canvas>
+                                    </div>
+                                </div>
+                                <div id="canvas_buttons" class="row">
+                                    <div class="col-md-12 text-center">
+                                        <div class="form-group">
+                                            <button type="button" id="resetCanvas" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Clear</button>
+                                            <div class="btn-group" data-toggle="buttons" id="pen_mode">
+                                                <label class="btn btn-default btn-sm active">
+                                                    <input type="radio" name="canvas_mode" id="pen_write" checked="checked"><span class="glyphicon glyphicon-pencil"></span> Write
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio" name="canvas_mode" id="pen_erase"><span class="glyphicon glyphicon-asterisk"></span> Erase
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Actions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" id="inputNumber" class="form-control input-sm">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary btn-sm" type="button" id="learnClicked">Learn</button>
+                                            <button class="btn btn-success btn-sm" type="button" id="saveNumberClicked" title="Save to self-train later"><span class="glyphicon glyphicon-floppy-save"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" id="outputNumber" class="form-control input-sm">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary btn-longer btn-sm" type="button" id="processClicked">Process</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="tab-pane" id="tab_save">
+                                            <h4>List of saved drawings <small id="nbr-save">0</small></h4><hr>
+                                            <div id="listOfNumbers" class="list-group" style="overflow-y: auto; max-height: 250px;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="tab-pane active" id="tab_option">
+                                            <h4>Setup</h4><hr>
+                                            <div class="form-group">
+                                                <label for="thickness_display">Extra thickness:</label>
+                                                <span id="thickness_display"></span><br>
+                                                <input type="range" id="thickness_slider"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="training_display">Training set:</label>
+                                                <span id="training_display"></span><br>
+                                                <input type="range" id="training_slider"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="activation_display">Activation threshold:</label>
+                                                <span id="activation_display"></span><br>
+                                                <input type="range" id="activation_slider"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pixel_displayX">Pixel number X:</label>
+                                                <span id="pixel_displayX"></span><br>
+                                                <input type="range" id="pixel_sliderX"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="pixel_displayY">Pixel number Y:</label>
+                                                <span id="pixel_displayY"></span><br>
+                                                <input type="range" id="pixel_sliderY"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" id="learnAllElements" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-repeat"></span> Self-training</button>
+                                <button type="button" id="resetPerceptron" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Reset data</button><br>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fenêtre modale pour le rapport d'apprentissage du perceptron.-->
+                    <div id="training_report">
+                        <div class="row">
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Output values</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="chartContainerOutput" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Training report</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="chartContainerTrainingReport" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">-->
+            <!--</div>-->
+        </div>
+
+        <!-- LOADING SCRIPTS -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/Perceptron.js"></script>
+        <script type="text/javascript" src="js/CanvasDisplay.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+
+    </body>
+</html>
