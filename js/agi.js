@@ -13,7 +13,7 @@ function AGI() {
 						{
 							title: "Protect It!",
 							titleMuted: "Protect It!",
-							titleLeft: " It'll blow your mind.",
+							titleLeft: " &mdash; It'll blow your mind.",
 							img: "protectit.png",
 							imgBig: "protectit_big.png",
 							urlAccess: "http://adrael.github.io/projects/protectit/index.html",
@@ -24,7 +24,7 @@ function AGI() {
 						{
 							title: "Diap.",
 							titleMuted: "Diap.",
-							titleLeft: " What's up?",
+							titleLeft: " &mdash; What's up?",
 							img: "diap.png",
 							imgBig: "diap_big.png",
 							urlAccess: "http://adrael.github.io/projects/diap/index.html",
@@ -34,13 +34,24 @@ function AGI() {
 
 						{
 							title: "EPSI Courses",
-							titleMuted: "EPSI Courses",
-							titleLeft: ". Exactly.",
+							titleMuted: "EPSI Courses.",
+							titleLeft: " &mdash; Exactly.",
 							img: "epsicourses.png",
 							imgBig: "epsicourses_big.png", 
 							urlAccess: "http://adrael.github.io/projects/epsicourses/index.html", 
 							urlGit: "https://github.com/Adrael/EPSICourses",
 							text: "Made with Diap. \"EPSI Courses\" intend to give access to all of the fourth year students of the EPSI Engineering School to the courses materials. Made by a student for the students.<br><br>"
+						},
+
+						{
+							title: "GHaLDoS",
+							titleMuted: "GHaLDoS!",
+							titleLeft: " &mdash; Run Forrest.",
+							img: "ghaldos.png",
+							imgBig: "ghaldos_big.png", 
+							urlAccess: "http://adrael.github.io/projects/ghaldos/index.html", 
+							urlGit: "https://github.com/Adrael/GHaLDoS",
+							text: "An amazing Perceptron 2.0 made by two students from EPSI Bordeaux. Recognition. Ammunition. Demolition.<br><br>"
 						}
 					];
 
