@@ -29,7 +29,7 @@ function AGI() {
 							imgBig: "diap_big.png",
 							urlAccess: "http://adrael.github.io/projects/diap/index.html",
 							urlGit: "https://github.com/Adrael/Diap",
-							text: "If you ever heard of <a href=\"https://github.com/hakimel/reveal.js\" class=\"clearLink\">Reveal.js</a>, then you'll be glad to use \"Diap\". It's Reveal.js with a lot of improvements. Now you can do whatever you always wanted to do, easily. Take a look, and don't hesistate to give me your feedback!<br><br>"
+							text: "If you ever heard of <a href=\"https://github.com/hakimel/reveal.js\" target=\"_blank\" class=\"clearLink\">Reveal.js</a>, then you'll be glad to use \"Diap\". It's Reveal.js with a lot of improvements. Now you can do whatever you always wanted to do, easily. Take a look, and don't hesistate to give me your feedback!<br><br>"
 						},
 
 						{
