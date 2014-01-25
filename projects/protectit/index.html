@@ -19,7 +19,7 @@
                 <h1>
                 	<small class="subtitle">Developpez.com Project</small>
                 	<br>
-                	Protect It! &mdash; Intuitive Password Generator<sup>BETA</sup>
+                	Protect It! &mdash; Intuitive Password Generator
                 	<small class="author">
                 		Rapha&euml;l MARQUES
                 	</small>
@@ -87,7 +87,7 @@
                                     <div class="col-md-12 text-left">
                                         <div class="form-group">
                                             <label for="spellerInput">Spelled Password</label>
-                                            <input type="text" id="spellerInput" class="form-control" readonly>
+                                            <textarea type="text" id="spellerInput" class="form-control" readonly></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -122,13 +122,13 @@
                                 <label>Reminders</label>
                                 <div class="checkbox">
                                     <label>
-                                        <input id="vishash"    type="checkbox" checked/> <span class="glyphicon glyphicon-picture"></span> Generate VisualHash<br><br>
+                                        <input id="vishash" type="checkbox" onchange="PI.makeNormalQRCodeAndVisualHash()" checked/> <span class="glyphicon glyphicon-picture"></span> Generate VisualHash<br><br>
                                     </label>
                                     <label>
-                                        <input id="qrcodehash" type="checkbox" checked/> <span class="glyphicon glyphicon-qrcode"></span> Generate QRCodeHash<br><br>
+                                        <input id="qrcodehash" type="checkbox" onchange="PI.makeNormalQRCodeAndVisualHash()" checked/> <span class="glyphicon glyphicon-qrcode"></span> Generate QRCodeHash<br><br>
                                     </label>
                                     <label>
-                                        <input id="spellPassword" type="checkbox" checked/> <span class="glyphicon glyphicon-list"></span> Spell password
+                                        <input id="spellPassword" type="checkbox" onchange="PI.spellPassword()" checked/> <span class="glyphicon glyphicon-list"></span> Spell password
                                     </label>
                                 </div>
                             </div>
@@ -258,6 +258,8 @@
                                     <br>
                                     <label>Copyrights / Special thanks to</label>
                                     <p>
+                                        <i>My beta testers: Bastien, Yoann, Fabrice</i>
+                                        <br>
                                         Geek's password meter: <a href="http://jsfiddle.net/fh9FP/12/" target="_blank">Link</a>
                                         <br>
                                         VizHash: <a href="http://sametmax.com/vizhash-js-notre-implementation-libre-de-hash-visuel-utilisant-html5-canvas/" target="_blank">Link</a>
