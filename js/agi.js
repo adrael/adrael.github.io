@@ -62,7 +62,7 @@ function AGI() {
 							imgBig: "cryptojslogin_big.png", 
 							urlAccess: "http://adrael.github.io/projects/cryptojslogin/index.html", 
 							urlGit: "https://github.com/Adrael/CryptoJSLogin",
-							text: "Ever dreamed of a beautiful and nevertheless secured way of log in somewhere? Now with CryptoJSLogin thanks to crypto-js and Bootstrap, you got it.<br><br>"
+							text: "Ever dreamed of a beautiful and nevertheless secured way of log in somewhere? Now with CryptoJSLogin thanks to crypto-js and Bootstrap, you got it.<br>"
 						}
 					];
 
