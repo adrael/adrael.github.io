@@ -63,6 +63,17 @@ function AGI() {
 							urlAccess: "http://adrael.github.io/projects/cryptojslogin/index.html", 
 							urlGit: "https://github.com/Adrael/CryptoJSLogin",
 							text: "Ever dreamed of a beautiful and nevertheless secured way of log in somewhere? Now with CryptoJSLogin thanks to crypto-js and Bootstrap, you got it.<br>"
+						},
+
+						{
+							title: "RPJS [In progress]",
+							titleMuted: "RPJS",
+							titleLeft: " &mdash; Knowledge is power. [In progress]",
+							img: "rpjs.png",
+							imgBig: "rpjs_big.png", 
+							urlAccess: "http://adrael.github.io/projects/rpjs/index.html", 
+							urlGit: "https://github.com/Adrael/rpjs",
+							text: "Right bottom left up right bottom left up. Wait, I've seen this place already!<br><br>"
 						}
 					];
 
