@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CryptoJSLogin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://adrael.github.io/projects/cryptojslogin/css/cover.css" rel="stylesheet">
+    <link href="http://adrael.github.io/projects/cryptojslogin/css/signin.css" rel="stylesheet">
+    <link href="http://adrael.github.io/projects/cryptojslogin/css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">CryptoJSLogin</h3>
+              <ul class="nav masthead-nav">
+                <li><a href="http://adrael.github.io/projects/cryptojslogin/index.html">Home</a></li>
+                <li class="active"><a href="#">Log in</a></li>
+                <li><a href="http://adrael.github.io/projects/cryptojslogin/html/contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+          <span id="feedbackLogin"></span>
+            <!--<span id="feedbackLogin" class="success">Successfully logged in!</span>-->
+            <!--<span id="feedbackLogin" class="failure">Wrong email/password combination</span>-->
+            <h1 class="cover-heading">Log in &mdash; Credentials</h1>
+            <p class="lead">
+              <small>
+                Try it now!
+                <br>
+                test@test.com / test
+              </small>
+            </p>
+            <form id="cryptojslogin" class="form-signin" role="form">
+              <input type="email" class="form-control" placeholder="Email address" required="" autofocus="">
+              <input type="password" class="form-control" placeholder="Password" required="">
+              <a class="btn btn-primary" role="button" onclick="cjsl.login({mode: 'type', inputs: ['email', 'password']});">Log in</a>
+              <a class="btn btn-danger" href="http://adrael.github.io/projects/cryptojslogin/index.html" role="button">Run away</a>
+            </form>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>
+                &copy; <a href="http://adrael.github.io/" target="_blank">Rapha&euml;l MARQUES</a> 2014
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="http://adrael.github.io/projects/cryptojslogin/js/sha3.js"></script>
+    <script type="text/javascript" src="http://adrael.github.io/projects/cryptojslogin/js/pbkdf2.js"></script>
+    <script type="text/javascript" src="http://adrael.github.io/projects/cryptojslogin/js/rc4.js"></script>
+    <script type="text/javascript" src="http://adrael.github.io/projects/cryptojslogin/js/cryptojslogin.min.js"></script>
+    <script type="text/javascript">
+      var cjsl = new CryptoJSLogin("cryptojslogin");
+    </script>
+  
+  </body>
+</html>
