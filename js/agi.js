@@ -52,6 +52,17 @@ function AGI() {
 							urlAccess: "http://adrael.github.io/projects/ghaldos/index.html", 
 							urlGit: "https://github.com/Adrael/GHaLDoS",
 							text: "An amazing Perceptron 2.0 made by two students from EPSI Bordeaux. Recognition. Ammunition. Demolition.<br><br>"
+						},
+
+						{
+							title: "CryptoJSLogin",
+							titleMuted: "CryptoJSLogin",
+							titleLeft: " &mdash; The safer the better.",
+							img: "cryptojslogin.png",
+							imgBig: "cryptojslogin_big.png", 
+							urlAccess: "http://adrael.github.io/projects/cryptojslogin/index.html", 
+							urlGit: "https://github.com/Adrael/CryptoJSLogin",
+							text: "Ever dreamed of a beautiful and nevertheless secured way of log in somewhere? Now with CryptoJSLogin thanks to crypto-js and Bootstrap, you got it.<br><br>"
 						}
 					];
 
