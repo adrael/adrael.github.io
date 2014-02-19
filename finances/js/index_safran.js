@@ -1,5 +1,6 @@
 $(function () {
-        $('#container_safran').highcharts({
+        setTimeout(function() {
+            $('#container_safran').highcharts({
             chart: {
                 zoomType: 'x',
                 spacingRight: 20
@@ -80,4 +81,5 @@ $(function () {
                 ]
             }]
         });
-    });
+        }, 500);
+});

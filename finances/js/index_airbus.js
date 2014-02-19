@@ -1,4 +1,5 @@
 $(function () {
+    setTimeout(function() {
         $('#container_airbus').highcharts({
             chart: {
                 zoomType: 'x',
@@ -79,4 +80,5 @@ $(function () {
                 ]
             }]
         });
-    });
+    }, 500);
+});

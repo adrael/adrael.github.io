@@ -1,5 +1,6 @@
 $(function () {
-        $('#container_cegedim').highcharts({
+        setTimeout(function() {
+            $('#container_cegedim').highcharts({
             chart: {
                 zoomType: 'x',
                 spacingRight: 20
@@ -81,4 +82,5 @@ $(function () {
                 ]
             }]
         });
-    });
+        }, 500);
+});
