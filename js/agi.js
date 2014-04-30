@@ -181,26 +181,26 @@ function AGI() {
 					var p_center = document.createElement("p");
 					p_center.setAttribute("class", "text-center")
 
-					if(projects[i].urlAccess !== "") {
-						var a_accs = document.createElement("a");
-						a_accs.setAttribute("class", "btn btn-lg btn-warning");
-						a_accs.setAttribute("target", "_blank");
-						a_accs.setAttribute("href", projects[i].urlAccess);
-						a_accs.setAttribute("role", "button");
-						a_accs.innerHTML = "Launch »";
-						p_center.appendChild(a_accs);
-					}
+						if(projects[i].urlAccess !== "") {
+							var a_accs = document.createElement("a");
+							a_accs.setAttribute("class", "btn btn-lg btn-warning");
+							a_accs.setAttribute("target", "_blank");
+							a_accs.setAttribute("href", projects[i].urlAccess);
+							a_accs.setAttribute("role", "button");
+							a_accs.innerHTML = "Launch »";
+							p_center.appendChild(a_accs);
+						}
 
-					if(projects[i].urlGit !== "") {
-						var a_git = document.createElement("a");
-						a_git.setAttribute("class", "btn btn-lg btn-info");
-						a_git.setAttribute("target", "_blank");
-						a_git.setAttribute("href", projects[i].urlGit);
-						a_git.setAttribute("role", "button");
-						a_git.setAttribute("style", "margin-left: 10px;")
-						a_git.innerHTML = "View on Github »";
-						p_center.appendChild(a_git);
-					}
+						if(projects[i].urlGit !== "") {
+							var a_git = document.createElement("a");
+							a_git.setAttribute("class", "btn btn-lg btn-info");
+							a_git.setAttribute("target", "_blank");
+							a_git.setAttribute("href", projects[i].urlGit);
+							a_git.setAttribute("role", "button");
+							a_git.setAttribute("style", "margin-left: 10px;")
+							a_git.innerHTML = "View on Github »";
+							p_center.appendChild(a_git);
+						}
 
 				var div_col5 = document.createElement("div");
 				div_col5.setAttribute("class", "col-md-5");
@@ -214,8 +214,6 @@ function AGI() {
 					h2.appendChild(span);
 					h2.appendChild(span2)
 				div_col.appendChild(p_lead);
-					p_center.appendChild(a_accs);
-					p_center.appendChild(a_git);
 				div_col.appendChild(p_center);
 
 				div_col5.appendChild(img_feat);
