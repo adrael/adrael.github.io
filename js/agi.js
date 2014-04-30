@@ -66,14 +66,25 @@ function AGI() {
 						},
 
 						{
-							title: "RPJS [In progress]",
+							title: "RPJS [Paused]",
 							titleMuted: "RPJS",
-							titleLeft: " &mdash; Knowledge is power. [In progress]",
+							titleLeft: " &mdash; Knowledge is power. [Paused]",
 							img: "rpjs.png",
 							imgBig: "rpjs_big.png", 
 							urlAccess: "http://adrael.github.io/projects/rpjs/index.html", 
 							urlGit: "https://github.com/Adrael/rpjs",
 							text: "Right bottom left up right bottom left up. Wait, I've seen this place already!<br><br>"
+						},
+
+						{
+							title: "FindOnCraig",
+							titleMuted: "FindOnCraig",
+							titleLeft: " &mdash; Looking for something?",
+							img: "foc.png",
+							imgBig: "foc_big.png", 
+							urlAccess: "http://findoncraig.com", 
+							urlGit: "",
+							text: "Ever dreamed of finding stuff on all Craigslist's websites? Dreaming is over.<br><br>"
 						}
 					];
 
@@ -109,13 +120,18 @@ function AGI() {
 
 				var p_butt = document.createElement("p");
 				p_butt.setAttribute("class", "text-center");
+
+				if(projects[i].urlAccess !== "") {
 					var a_accs = document.createElement("a");
 					a_accs.setAttribute("class", "btn btn-warning");
 					a_accs.setAttribute("target", "_blank");
 					a_accs.setAttribute("href", projects[i].urlAccess);
 					a_accs.setAttribute("role", "button");
 					a_accs.innerHTML = "Launch »";
+					p_butt.appendChild(a_accs);
+				}
 
+				if(projects[i].urlGit !== "") {
 					var a_git = document.createElement("a");
 					a_git.setAttribute("class", "btn btn-info");
 					a_git.setAttribute("target", "_blank");
@@ -123,9 +139,8 @@ function AGI() {
 					a_git.setAttribute("role", "button");
 					a_git.setAttribute("style", "margin-left: 10px;")
 					a_git.innerHTML = "View on Github »";
-
-				p_butt.appendChild(a_accs);
-				p_butt.appendChild(a_git);
+					p_butt.appendChild(a_git);
+				}
 
 			div.appendChild(img);
 			div.appendChild(h2);
@@ -166,13 +181,17 @@ function AGI() {
 					var p_center = document.createElement("p");
 					p_center.setAttribute("class", "text-center")
 
+					if(projects[i].urlAccess !== "") {
 						var a_accs = document.createElement("a");
 						a_accs.setAttribute("class", "btn btn-lg btn-warning");
 						a_accs.setAttribute("target", "_blank");
 						a_accs.setAttribute("href", projects[i].urlAccess);
 						a_accs.setAttribute("role", "button");
 						a_accs.innerHTML = "Launch »";
+						p_center.appendChild(a_accs);
+					}
 
+					if(projects[i].urlGit !== "") {
 						var a_git = document.createElement("a");
 						a_git.setAttribute("class", "btn btn-lg btn-info");
 						a_git.setAttribute("target", "_blank");
@@ -180,9 +199,8 @@ function AGI() {
 						a_git.setAttribute("role", "button");
 						a_git.setAttribute("style", "margin-left: 10px;")
 						a_git.innerHTML = "View on Github »";
-
-					p_center.appendChild(a_accs);
-					p_center.appendChild(a_git);
+						p_center.appendChild(a_git);
+					}
 
 				var div_col5 = document.createElement("div");
 				div_col5.setAttribute("class", "col-md-5");
