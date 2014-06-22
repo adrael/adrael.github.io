@@ -88,7 +88,7 @@ function AGI() {
 							img: "imads.png",
 							imgBig: "imads_big.png", 
 							urlAccess: "http://adrael.github.io/projects/jarvis/Jarvis2.0/index.html", 
-							urlGit: "https://github.com/Adrael/jarvis/Jarvis2.0",
+							urlGit: "https://github.com/Adrael/jarvis/tree/master/Jarvis2.0",
 							text: "Experiments on Experts Systems learned at school. Enjoy the Iron Man Armor Diagnostic System!!<br><br>"
 						},
 
@@ -99,7 +99,7 @@ function AGI() {
 							img: "jarvis.png",
 							imgBig: "jarvis_big.png", 
 							urlAccess: "http://adrael.github.io/projects/jarvis/Jarvis3.0/index.html", 
-							urlGit: "https://github.com/Adrael/jarvis/Jarvis3.0",
+							urlGit: "https://github.com/Adrael/jarvis/tree/master/Jarvis3.0",
 							text: "Improvements of the experiments on Experts Systems learned at school. Level up, suit up, we've got some bad guys' asses to kick-off!<br>"
 						},
 
