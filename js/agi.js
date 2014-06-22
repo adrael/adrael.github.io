@@ -76,6 +76,49 @@ function AGI() {
 							text: "Right bottom left up right bottom left up. Wait, I've seen this place already!<br><br>"
 						},
 
+
+
+
+
+
+						{
+							title: "IMADS",
+							titleMuted: "IMADS",
+							titleLeft: " &mdash; Because power is never enough.",
+							img: "imads.png",
+							imgBig: "imads_big.png", 
+							urlAccess: "http://adrael.github.io/projects/jarvis/Jarvis2.0/index.html", 
+							urlGit: "https://github.com/Adrael/jarvis/Jarvis2.0",
+							text: "Experiments on Experts Systems learned at school. Enjoy the Iron Man Armor Diagnostic System!!<br><br>"
+						},
+
+						{
+							title: "J.A.R.V.I.S",
+							titleMuted: "J.A.R.V.I.S",
+							titleLeft: " &mdash; IMADS you say? Too mainstream.",
+							img: "jarvis.png",
+							imgBig: "jarvis_big.png", 
+							urlAccess: "http://adrael.github.io/projects/jarvis/Jarvis3.0/index.html", 
+							urlGit: "https://github.com/Adrael/jarvis/Jarvis3.0",
+							text: "Improvements of the experiments on Experts Systems learned at school. Level up, suit up, we've got some bad guys' asses to kick-off!<br>"
+						},
+
+						{
+							title: "Termites",
+							titleMuted: "Termites",
+							titleLeft: " &mdash; *Crunch* *Crunch* Wot? Am bosy eatun wod!",
+							img: "termites.png",
+							imgBig: "termites_big.png", 
+							urlAccess: "http://adrael.github.io/projects/termites/index.html", 
+							urlGit: "https://github.com/Eptwalabha/termites-projet-ia",
+							text: "Experiments on Multi-Agent Systems + AStar pathfinding + Genetic Algorithm learned at school. Sounds awesome? That's because it is.<br>"
+						},
+
+
+
+
+
+
 						{
 							title: "FindOnCraig",
 							titleMuted: "FindOnCraig",
@@ -85,6 +128,17 @@ function AGI() {
 							urlAccess: "http://findoncraig.com", 
 							urlGit: "",
 							text: "Ever dreamed of finding stuff on all Craigslist's websites? Dreaming is over.<br><br>"
+						},
+
+						{
+							title: "goalmap",
+							titleMuted: "goalmap",
+							titleLeft: " &mdash; Set, Track, Reach",
+							img: "goalmap.png",
+							imgBig: "goalmap_big.png", 
+							urlAccess: "http://www.goalmap.com", 
+							urlGit: "",
+							text: "The platform to set, track and reach all your goals. It's free, it's easy, and you'll love it!<br><br>"
 						}
 					];
 
