@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="../js/constants.js"></script>
+    <script type="text/javascript" src="../js/world.js"></script>
+    <script type="text/javascript" src="../js/agent.js"></script>
+    <script type="text/javascript" src="../js/wall.js"></script>
+    <script type="text/javascript" src="../js/graph/Geometry.js"></script>
+    <script type="text/javascript" src="../js/graph/Vertex.js"></script>
+    <script type="text/javascript" src="../js/graph/Graph.js"></script>
+    <script>
+
+        var world = null;
+        var canvasElement = null;
+        var canvasContext = null;
+        var speed = 1;
+        var mouseVertex = Vertex(0, 0);
+        var mainLoop = null;
+        var lastUpdate = Date.now();
+        var dt = 0;
+        var wallList = [];
+
+        function updateTime() {
+            var now = Date.now();
+            dt = now - lastUpdate;
+            lastUpdate = now;
+        }
+
+        function update() {
+            updateTime();
+            world.update(dt * speed);
+            canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
+            world.draw(canvasContext);
+
+            var edgeMouse = [[canvasElement.width / 2, canvasElement.height / 2], [mouseVertex.x, mouseVertex.y]];
+
+            canvasContext.strokeStyle="rgba(0, 0, 255, 1)";
+            if (doSegmentIntersectsWithWalls(edgeMouse, wallList)) {
+                canvasContext.strokeStyle = "rgba(255, 0, 0, 1)";
+            }
+            canvasContext.beginPath();
+            canvasContext.moveTo(edgeMouse[0][0], edgeMouse[0][1]);
+            canvasContext.lineTo(edgeMouse[1][0], edgeMouse[1][1]);
+            canvasContext.stroke();
+        }
+
+        function init() {
+            mouseVertex = Vertex(0, 0);
+            canvasElement = document.getElementById("canvas");
+            canvasContext = this.canvasElement.getContext("2d");
+
+            world = new World(canvasElement.width, canvasElement.height);
+
+            for(var i = 0; i < 6; i++) {
+                var wall = new Wall();
+                world.addAgent(wall);
+                wall.moveTo(canvasElement.width * Math.random(), canvasElement.height * Math.random());
+                wallList.push(wall);
+            }
+
+            var fps = 120;
+            mainLoop = setInterval(update, 1000 / fps);
+
+            document.getElementById('canvas').addEventListener('mousemove', function(evt) {
+                var rect = canvasElement.getBoundingClientRect();
+                mouseVertex = new Vertex(evt.clientX - rect.left, evt.clientY - rect.top);
+            }, false);
+        }
+
+    </script>
+</head>
+<body onload="init()">
+    <canvas id="canvas" width="600" height="600" style="background-color:#eee; display:inline-block"></canvas>
+</body>
+</html>
