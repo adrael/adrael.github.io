@@ -8,7 +8,7 @@ function Termite() {
     this.perceptionRadius = 30;
 
     this.collideTypes = ["wood_heap", "wall"];
-    this.contactTypes = ["wood_heap", "termite"];
+    this.contactTypes = ["wood_heap", "termite", "wall"];
 
     this.agentsMet = [];
 
@@ -24,6 +24,7 @@ function Termite() {
     this.lastWoodHeap = null;
     this.lastTermite = null;
     this.lastPickUpHeap = null;
+    this.lastHitWall = null;
 
     this.queen = null;
 }
@@ -33,7 +34,7 @@ Termite.prototype.initExpertSystem = function() {
     // Lorsqu’un termite “rōnin” rencontre un tas de bois sans reine, il change ce tas de bois en termitière
     // en y plaçant une nouvelle reine et se change en termite “ouvrier”.
     this.expertSystem.addRule("drop_queen", ["hit_heap", "dontHasQueen", "wood_heapDontHasQueen", "wood_heapDontHasPheromone"]);
-    //this.expertSystem.addRule("drop_wood", ["charged", "hit_heap", "dontHasQueen", "wood_heapDontHasQueen", "wood_heapDontHasPheromone"]);
+    // this.expertSystem.addRule("drop_wood", ["charged", "hit_heap", "dontHasQueen", "wood_heapDontHasQueen", "wood_heapDontHasPheromone"]);
 
     // Lorsqu’un termite “rōnin” rencontre une termitière, il jure fidélité à la reine qui la dirige et devient un termite “ouvrier”
     this.expertSystem.addRule("ally_queen", ["hit_heap", "dontHasQueen", "wood_heapHasQueen"]);
@@ -123,9 +124,9 @@ Termite.prototype.update = function(dt) {
     this.nextChange -= dt;
     this.last_hit_type = "";
     this.lastWoodHeap = null;
+    this.lastHitWall = null;
     this.lastTermite = null;
     this.hit_wall = false;
-    this.agentsMet = [];
 };
 
 Termite.prototype.perceive = function() {
@@ -224,7 +225,7 @@ Termite.prototype.act = function(conclusions) {
     }
 };
 
-Termite.prototype.receiveOrderFromQueen = function() {
+Termite.prototype.receiveOrderFromQueen = function(path) {
     debug('receiveOrderFromQueen')
 };
 
@@ -345,8 +346,11 @@ Termite.prototype.informQueen = function() {
     if(this.hasQueen()) {
 
         for(var i in this.agentsMet) {
-            this.queen.informNewAgent(i);
+            // console.log('informing queen', this.agentsMet[i].typeId)
+            this.queen.informNewAgent(this.agentsMet[i]);
         }
+
+        // this.agentsMet = [];
 
     }
 
@@ -385,23 +389,34 @@ Termite.prototype.setQueen = function(queen) {
 
 Termite.prototype.processCollision = function(collidedAgent) {
 
-    this.agentsMet.push(collidedAgent);
+    if(collidedAgent) {
 
-    if (collidedAgent === null) {
-        this.last_hit_type = "wall";
-        return;
-    }
+        this.agentsMet.push(collidedAgent);
+        // console.log(this.agentsMet.length)
 
-    this.last_hit_type = collidedAgent.typeId;
+        if (collidedAgent === null) {
+            this.last_hit_type = "wall";
+            return;
+        }
 
-    if (this.last_hit_type === "wood_heap") {
-        this.lastWoodHeap = collidedAgent;
-        debug("hit heap");
-        return;
-    }
+        this.last_hit_type = collidedAgent.typeId;
 
-    else if(this.last_hit_type === "termite") {
-        this.lastTermite = collidedAgent;
+        if(this.last_hit_type === "wall") {
+            this.lastHitWall = collidedAgent;
+            debug("hit wall");
+            return;
+        }
+
+        if (this.last_hit_type === "wood_heap") {
+            this.lastWoodHeap = collidedAgent;
+            debug("hit heap");
+            return;
+        }
+
+        else if(this.last_hit_type === "termite") {
+            this.lastTermite = collidedAgent;
+        }
+
     }
 };
 

@@ -49,7 +49,7 @@ function init() {
                         canvasElement.height * Math.random());
     }
 
-    for(i = 0; i < 50; i ++) {
+    for(i = 0; i < 30; i ++) {
         var termite = new Termite();
         world.addAgent(termite);
         termite.moveTo( canvasElement.width * Math.random(), 
@@ -80,6 +80,12 @@ $(document).ready(function() {
     $('input#umbilical').change(
         function () {
             GLOBAL_DRAW_UMBILICAL = !GLOBAL_DRAW_UMBILICAL;
+        }
+    );
+
+    $('input#paths').change(
+        function () {
+            GLOBAL_DRAW_PATHS = !GLOBAL_DRAW_PATHS;
         }
     );
 

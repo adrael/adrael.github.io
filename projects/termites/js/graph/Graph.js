@@ -15,7 +15,7 @@ Graph.prototype.randomizeVertices = function(nbr, width, height, walls) {
         do {
             noCollide = true;
             vertex = new Vertex(width * Math.random(), height * Math.random());
-            for (var k = 0, size2 = walls.length; k < size2; k++) {
+            for (var k in walls) {
                 if (isPointInWall([vertex.x, vertex.y], walls[k])) {
                     noCollide = false;
                     break;
@@ -114,7 +114,7 @@ Graph.prototype.savePathFromTo = function(from, to, path) {
 };
 
 Graph.prototype.getPathFromTo = function(from, to) {
-
+    console.log("coucou");
     for (var i = 0, size = this.paths.length; i < size; i++) {
         var path = this.paths[i];
         if (path.from == from && path.to == to) {

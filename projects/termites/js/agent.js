@@ -55,7 +55,7 @@ Agent.prototype.drop = function(agent) {
 };
 
 Agent.prototype.moveTo = function(x, y) {
-//	console.log('moveTo', x, y)
+	// console.log('moveTo', x, y)
     this.previousX = this.x;
     this.previousY = this.y;
 	this.x = x;

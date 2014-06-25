@@ -19,25 +19,60 @@ function Queen(params) {
     this.setPower(params.power);
 	this.moveTo(params.x, params.y);
     this.vertex = new Vertex(params.x, params.y);
+
+    this.geneticAlgorithm = new GeneticAlgorithm(this);
+    this.geneticAlgorithm.setFixedVertices([new Vertex(this.x, this.y)]);
+    this.geneticAlgorithm.setPopulationSize(15);
+    this.geneticAlgorithm.setDNASize(20);
+
+    this.graphs = null;
 }
 
 Queen.prototype.informNewAgent = function(agent) {
-    this.knownAgents[agent.id] = agent;
-    this.hasNewAgent = true;
+
+    if(this.knownAgents[agent.id] == null || this.knownAgents[agent.id] == undefined) {
+
+        this.knownAgents[agent.id] = agent;
+
+        if(agent.typeId === 'wall' && !this.knownWalls[agent.id]) {
+            this.knownWalls[agent.id] = agent;
+            this.hasNewAgent = true;
+        }
+
+        else if(agent.typeId === "wood_heap") {
+            this.knownWoodHeaps.push(agent);
+            this.hasNewAgent = true;
+            this.geneticAlgorithm.addFixedVertex(agent.vertex);
+        }
+
+        else if(agent.typeId === "termite" && !this.knownAgents[agent.id]) {
+            this.knownAgents[agent.id] = agent;
+            this.hasNewAgent = true;
+        }
+    }
+
 };
 
 Queen.prototype.updateGraphAndStrategy = function () {
     debug('updateGraphAndStrategy')
-    this.generateGraph();
+    
+    if(this.hasNewAgent) {
+        this.geneticAlgorithm.generation = -1;
+        this.generateGraph();
+    }
+
     this.updateStrategy();
 };
 
 Queen.prototype.generateGraph = function() {
-
+    do {
+        this.graphs = this.geneticAlgorithm.processNextGeneration();
+        // console.log('fitness:', this.graphs[0].fitness)
+    } while(this.graphs[0].fitness <= 1000 || this.geneticAlgorithm.generation > 10);
 };
 
 Queen.prototype.updateStrategy = function () {
-
+    
 };
 
 Queen.prototype.newTaskRequest = function(agent) {
@@ -47,12 +82,17 @@ Queen.prototype.newTaskRequest = function(agent) {
 Queen.prototype.giveNewTask = function() {
 
     debug('giveNewTask')
-    for(var termite in this.termitesWaitingForTask) {
-        this.termitesWaitingForTask[termite].receiveOrderFromQueen(/*
+    var graph = this.graphs[0];
+    if(graph !== null && this.knownWoodHeaps !== undefined && this.knownWoodHeaps.length > 0) {
 
-            ICI ORDRE DE LA REINE
-        
-        */);
+
+        var path = graph.getPathFromTo(this.vertex, this.knownWoodHeaps[0].vertex);
+
+        console.log(path);
+        for(var termite in this.termitesWaitingForTask) {
+            this.termitesWaitingForTask[termite].receiveOrderFromQueen(path);
+        }
+
     }
 
 };
@@ -119,4 +159,8 @@ Queen.prototype.draw = function(context) {
     context.arc(this.x, this.y, this.boundingRadius, 0, 2*Math.PI);
     context.fill();
     context.stroke();
+
+    if(this.graphs !== null && this.graphs !== undefined && GLOBAL_DRAW_PATHS) {
+        this.graphs[0].draw(context);
+    }
 };

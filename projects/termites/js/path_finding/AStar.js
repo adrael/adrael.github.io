@@ -23,6 +23,7 @@ AStar.prototype.setGraph = function(graph) {
 };
 
 AStar.prototype.getPathFromTo = function(start, goal) {
+    console.log("coucou Astar");
 
     if (this.graph !== undefined && this.graph !== null) {
         var savedPath = this.graph.getPathFromTo(start, goal);

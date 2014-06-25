@@ -1,5 +1,6 @@
 var GLOBAL_CONSTANT_ID = 0;
 var GLOBAL_DRAW_UMBILICAL = true;
+var GLOBAL_DRAW_PATHS = true;
 var world = null;
 var DEBUG = false;
 

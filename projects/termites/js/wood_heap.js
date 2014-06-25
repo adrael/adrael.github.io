@@ -14,6 +14,7 @@ function WoodHeap() {
     this.pheromone = null;
 
     this.updateRadius();
+    this.vertex = new Vertex(this.x, this.y);
 }
 
 WoodHeap.prototype.setWoodVolume = function(woodVolume) {

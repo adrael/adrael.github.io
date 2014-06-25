@@ -1,25 +1,31 @@
 function partition(array, begin, end, pivot)
 {
     var piv = array[pivot].fitness;
-    array.swap(pivot, end - 1);
+    swap(array, pivot, end - 1);
     var store = begin;
     for (var ix = begin; ix < end-1; ++ix) {
         if (array[ix].fitness > piv) {
-            array.swap(store, ix);
+            swap(array, store, ix);
             ++store;
         }
     }
-    array.swap(end - 1, store);
+    swap(array, end - 1, store);
 
     return store;
 }
 
-Array.prototype.swap = function(a, b)
-{
-    var tmp = this[a];
-    this[a] = this[b];
-    this[b] = tmp;
-};
+function swap(array, a, b) {
+    var tmp = array[a];
+    array[a] = array[b];
+    array[b] = tmp;
+}
+
+// Array.prototype.swap = function(a, b)
+// {
+//     var tmp = this[a];
+//     this[a] = this[b];
+//     this[b] = tmp;
+// };
 
 function quickSort(array)
 {

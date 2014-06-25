@@ -1,7 +1,7 @@
 function GeneticAlgorithm(queen) {
     this.generation = -1;
     this.population = [];
-    this.dimension = {width: 0, height: 0};
+    this.dimension = {width: 600, height: 600};
     this.graph = new Graph();
     this.fitnessThreshold = 0;
     this.populationSize = 10;
@@ -12,6 +12,14 @@ function GeneticAlgorithm(queen) {
 
 GeneticAlgorithm.prototype.setFixedVertices = function(vertices) {
     this.commonVertices = vertices;
+};
+
+GeneticAlgorithm.prototype.getFixedVertices = function() {
+    return this.commonVertices;
+};
+
+GeneticAlgorithm.prototype.addFixedVertex = function(vertex) {
+    this.commonVertices.push(vertex);
 };
 
 GeneticAlgorithm.prototype.addNewEntity = function () {
