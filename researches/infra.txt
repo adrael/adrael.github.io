@@ -1,8 +1,0 @@
-https://code.google.com/p/javascript-bcrypt/downloads/detail?name=jBCrypt-v2.2.tar.gz&can=2&q=
-
-/ = index.html
-	>> Accès à un menu répertoriant les différents "ONLINE PROJECTS" (projet finances / protectit / Diap / EPSI Courses ...)
-	>> les projets privés ne pouvant être accédés que par certaines personnes (ou juste moi)
-	   nécessiteront une auth par log/mdp hashé avec bcrypt.js puis stocké dans un js
-	   le log recuperera les infos login/mdp, puis fera un hash et comparera l'obtenu avec l'existant.
-	   Si ok, voir pour créer un token de session, pour eviter au mieux le bypass par url.
