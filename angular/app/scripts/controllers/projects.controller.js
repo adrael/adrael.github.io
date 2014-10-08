@@ -47,11 +47,11 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; It\'ll blow your mind.'),
                 img: 'protectit.png',
                 imgBig: 'protectit_big.png',
-                urlAccess: 'http://adrael.github.io/projects/protectit/index.html',
+                urlAccess: 'http://securite.developpez.com/defis/generateur-mot-de-passe/protect-it/',
                 urlGit: 'https://github.com/Adrael/ProtectIt',
                 text: $sce.trustAsHtml('\'Protect It\' is a web-based solution created for a Developpez.com project. ' +
                     'The goal of this application is to help create safe and secure passwords, while remembering ' +
-                    'them without having to write them down somewhere.')
+                    'them without having to write them down somewhere. &mdash; Award-winning at developpez.com')
             },
 
             {
@@ -60,7 +60,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; What\'s up?'),
                 img: 'diap.png',
                 imgBig: 'diap_big.png',
-                urlAccess: 'http://adrael.github.io/projects/diap/index.html',
+                urlAccess: 'http://rawgit.com/Adrael/Diap/master/index.html#/',
                 urlGit: 'https://github.com/Adrael/Diap',
                 text: $sce.trustAsHtml('If you ever heard of ' +
                     '<a href=\"https://github.com/hakimel/reveal.js\" target=\"_blank\" class=\"clearLink\">Reveal.' +
@@ -75,7 +75,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; Exactly.'),
                 img: 'epsicourses.png',
                 imgBig: 'epsicourses_big.png',
-                urlAccess: 'http://adrael.github.io/projects/epsicourses/index.html',
+                urlAccess: 'http://rawgit.com/Adrael/EPSICourses/master/index.html#/',
                 urlGit: 'https://github.com/Adrael/EPSICourses',
                 text: $sce.trustAsHtml('Made with Diap. \'EPSI Courses\' intend to give access to all of the fourth ' +
                     'year students of the EPSI Engineering School to the courses materials. Made by a student for ' +
@@ -88,7 +88,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; Run Forrest.'),
                 img: 'ghaldos.png',
                 imgBig: 'ghaldos_big.png',
-                urlAccess: 'http://adrael.github.io/projects/ghaldos/index.html',
+                urlAccess: 'http://rawgit.com/Adrael/GHaLDoS/master/index.html',
                 urlGit: 'https://github.com/Adrael/GHaLDoS',
                 text: $sce.trustAsHtml('An amazing Perceptron 2.0 made by two students from EPSI Bordeaux. ' +
                     'Recognition. Ammunition. Demolition.<br>')
@@ -100,7 +100,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; The safer the better.'),
                 img: 'cryptojslogin.png',
                 imgBig: 'cryptojslogin_big.png',
-                urlAccess: 'http://adrael.github.io/projects/cryptojslogin/index.html',
+                urlAccess: 'http://rawgit.com/Adrael/CryptoJSLogin/master/index.html',
                 urlGit: 'https://github.com/Adrael/CryptoJSLogin',
                 text: $sce.trustAsHtml('Ever dreamed of a beautiful and nevertheless secured way of log in somewhere?' +
                     ' Now with CryptoJSLogin thanks to crypto-js and Bootstrap, you got it.<br>')
@@ -112,7 +112,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; Knowledge is power. [Paused]'),
                 img: 'rpjs.png',
                 imgBig: 'rpjs_big.png',
-                urlAccess: 'http://adrael.github.io/projects/rpjs/index.html',
+                urlAccess: 'http://rawgit.com/Adrael/rpjs/master/index.html',
                 urlGit: 'https://github.com/Adrael/rpjs',
                 text: $sce.trustAsHtml('Right bottom left up right bottom left up. Wait, I\'ve seen this place ' +
                     'already!<br><br>')
@@ -124,7 +124,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; Because power is never enough.'),
                 img: 'imads.png',
                 imgBig: 'imads_big.png',
-                urlAccess: 'http://adrael.github.io/projects/jarvis/Jarvis2.0/index.html',
+                urlAccess: 'http://rawgit.com/Adrael/jarvis/master/Jarvis2.0/index.html',
                 urlGit: 'https://github.com/Adrael/jarvis/tree/master/Jarvis2.0',
                 text: $sce.trustAsHtml('Experiments on Experts Systems learned at school. Enjoy the Iron Man Armor ' +
                     'Diagnostic System!!<br><br>')
@@ -136,7 +136,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; IMADS you say? Too mainstream.'),
                 img: 'jarvis.png',
                 imgBig: 'jarvis_big.png',
-                urlAccess: 'http://adrael.github.io/projects/jarvis/Jarvis3.0/index.html',
+                urlAccess: 'http://rawgit.com/Adrael/jarvis/master/Jarvis3.0/index.html',
                 urlGit: 'https://github.com/Adrael/jarvis/tree/master/Jarvis3.0',
                 text: $sce.trustAsHtml('Improvements of the experiments on Experts Systems learned at school. ' +
                     'Level up, suit up, we\'ve got some bad guys\' asses to kick-off!<br>')
@@ -148,7 +148,7 @@
                 titleLeft: $sce.trustAsHtml(' &mdash; *Crunch* *Crunch* Wot? Am bosy eatun wod!'),
                 img: 'termites.png',
                 imgBig: 'termites_big.png',
-                urlAccess: 'http://adrael.github.io/projects/termites/index.html',
+                urlAccess: 'http://rawgit.com/Eptwalabha/termites-projet-ia/master/src/index.html',
                 urlGit: 'https://github.com/Eptwalabha/termites-projet-ia',
                 text: $sce.trustAsHtml('Experiments on Multi-Agent Systems + AStar pathfinding + Genetic Algorithm ' +
                     'learned at school. Sounds awesome? That\'s because it is.<br>')
@@ -176,6 +176,17 @@
                 urlGit: '',
                 text: $sce.trustAsHtml('The platform to set, track and reach all your goals. ' +
                     'It\'s free, it\'s easy, and you\'ll love it!<br><br>')
+            },
+
+            {
+                title: 'Thesis Searcher',
+                titleMuted: 'Thesis Searcher',
+                titleLeft: $sce.trustAsHtml(' &mdash; The Google of the thesis'),
+                img: 'thesis-searcher.png',
+                imgBig: 'thesis-searcher_big.png',
+                urlAccess: 'http://rawgit.com/r0mdau/thesis-searcher/master/views/index.html#/home',
+                urlGit: 'https://github.com/r0mdau/thesis-searcher',
+                text: $sce.trustAsHtml('PDF Search engine made with ElasticSearch and NodeJS<br><br>')
             }
         ];
 

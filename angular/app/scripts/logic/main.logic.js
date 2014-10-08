@@ -55,7 +55,8 @@
                 '/': 'Home',
                 '/about': 'About',
                 '/contact': 'Contact',
-                '/projects': 'Projects'
+                '/projects': 'Projects',
+                '/404': '404 Page not found'
             };
 
             return routeNames[$location.path()];
