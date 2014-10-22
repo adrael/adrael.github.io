@@ -16,7 +16,21 @@ body {
 }
 .jumbotron .btn {
     font-size: 21px;
-    padding: 14px 24px;
+    /*padding: 14px 24px;*/
+}
+
+.jumbotron .btn.btn-special-middle,
+.jumbotron .btn.btn-special-first {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.jumbotron .btn.btn-special-middle,
+.jumbotron .btn.btn-special-last {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
